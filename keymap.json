@@ -110,16 +110,4 @@
             "ctrl-j": "vim::Down",
         },
     },
-    {
-        "context": "FileFinder || FileFinder > Picker > Editor || FileFinder > Picker > menu",
-        "unbind": {
-            "ctrl-j": "pane::SplitDown",
-        },
-    },
-    {
-        "context": "TextFinder || TextFinder > Picker > Editor || TextFinder > Picker > menu",
-        "unbind": {
-            "ctrl-j": "pane::SplitDown",
-        },
-    },
 ]
