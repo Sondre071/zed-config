@@ -1,0 +1,125 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+    {
+        "context": "(Workspace || SettingsWindow) && !Editor",
+        "bindings": {
+            "ctrl-j": "menu::SelectNext",
+            "ctrl-k": "menu::SelectPrevious",
+        },
+    },
+    {
+        "context": "!menu && !(vim_mode == insert) && !(Picker > Editor)",
+        "bindings": {
+            // Panes
+            "ctrl-shift-h": "pane::ActivatePreviousItem",
+            "ctrl-shift-j": "pane::CloseActiveItem",
+            "ctrl-shift-k": "pane::ReopenClosedItem",
+            "ctrl-shift-l": "pane::ActivateNextItem",
+
+            // File navigation
+            "space e": "project_panel::Toggle",
+            "space f f": "file_finder::Toggle",
+            "space f s": "text_finder::Toggle",
+            "space f g": "workspace::NewSearch",
+
+            // Other utils
+            "space f p": "workspace::CopyPath",
+            "space y": "editor::Copy",
+            "space p": "editor::Paste",
+        },
+    },
+
+    // Unbinds
+    {
+        "context": "Empty",
+    },
+    {
+        "context": "Workspace",
+        "unbind": {
+            "ctrl-shift-h": [
+                "pane::DeploySearch",
+                {
+                    "replace_enabled": true,
+                },
+            ],
+        },
+    },
+    {
+        "context": "ProjectSearchBar",
+        "unbind": {
+            "ctrl-shift-h": "search::ToggleReplace",
+        },
+    },
+    {
+        "context": "ProjectSearchView",
+        "unbind": {
+            "ctrl-shift-h": "search::ToggleReplace",
+        },
+    },
+    {
+        "context": "Terminal",
+        "unbind": {
+            "ctrl-shift-l": "terminal::Clear",
+        },
+    },
+    {
+        "context": "Editor",
+        "unbind": {
+            "ctrl-shift-l": "editor::SelectAllMatches",
+        },
+    },
+    {
+        "context": "Editor",
+        "unbind": {
+            "ctrl-shift-j": "editor::JoinLines",
+        },
+    },
+    {
+        "context": "Editor",
+        "unbind": {
+            "ctrl-shift-k": "editor::DeleteLine",
+        },
+    },
+    {
+        "context": "TextFinder || TextFinder > Picker > Editor || TextFinder > Picker > menu",
+        "unbind": {
+            "ctrl-j": "pane::SplitDown",
+        },
+    },
+    {
+        "context": "FileFinder || FileFinder > Picker > Editor || FileFinder > Picker > menu",
+        "unbind": {
+            "ctrl-j": "pane::SplitDown",
+        },
+    },
+    {
+        "context": "Workspace",
+        "unbind": {
+            "ctrl-j": "workspace::ToggleBottomDock",
+        },
+    },
+    {
+        "context": "VimControl && !menu",
+        "unbind": {
+            "ctrl-j": "vim::Down",
+        },
+    },
+    {
+        "context": "FileFinder || FileFinder > Picker > Editor || FileFinder > Picker > menu",
+        "unbind": {
+            "ctrl-j": "pane::SplitDown",
+        },
+    },
+    {
+        "context": "TextFinder || TextFinder > Picker > Editor || TextFinder > Picker > menu",
+        "unbind": {
+            "ctrl-j": "pane::SplitDown",
+        },
+    },
+]
