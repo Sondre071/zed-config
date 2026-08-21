@@ -14,27 +14,24 @@
         },
     },
     {
-        "context": "!menu && !(vim_mode == insert) && !(Picker > Editor)",
+        "context": "!menu && (!Editor || VimControl) && !(vim_mode == insert) && !(Picker > Editor)",
         "bindings": {
             // Panes
             "ctrl-shift-h": "pane::ActivatePreviousItem",
             "ctrl-shift-j": "pane::CloseActiveItem",
             "ctrl-shift-k": "pane::ReopenClosedItem",
             "ctrl-shift-l": "pane::ActivateNextItem",
-
             // File navigation
             "space e": "project_panel::Toggle",
             "space f f": "file_finder::Toggle",
             "space f s": "text_finder::Toggle",
             "space f g": "workspace::NewSearch",
-
             // Other utils
             "space f p": "workspace::CopyPath",
             "space y": "editor::Copy",
             "space p": "editor::Paste",
         },
     },
-
     // Unbinds
     {
         "context": "Empty",
