@@ -22,7 +22,7 @@
             "ctrl-shift-k": "pane::ReopenClosedItem",
             "ctrl-shift-l": "pane::ActivateNextItem",
             // File navigation
-            "space e": "project_panel::Toggle",
+            "space e": "workspace::ToggleLeftDock",
             "space f f": "file_finder::Toggle",
             "space f s": "text_finder::Toggle",
             "space f g": "workspace::NewSearch",
