@@ -7,13 +7,18 @@
 // from the command palette.
 [
     {
-        "context": "(Workspace || SettingsWindow) && !Editor",
+        // SettingsWindow - this is not covered by the workspace
+        // Picker > Editor - covers pickers with edit fields like text_filder and outline
+        "context": "SettingsWindow || menu || (Picker > Editor)",
         "bindings": {
             "ctrl-j": "menu::SelectNext",
             "ctrl-k": "menu::SelectPrevious",
         },
     },
     {
+        // These binds are only relevant when editing files.
+        // VimControl || vim_mode == insert - either one is active when editing a file
+        // Picker > Editor - modal edit fields. 
         "context": "!menu && (!Editor || VimControl) && !(vim_mode == insert) && !(Picker > Editor)",
         "bindings": {
             // Panes
@@ -21,11 +26,14 @@
             "ctrl-shift-j": "pane::CloseActiveItem",
             "ctrl-shift-k": "pane::ReopenClosedItem",
             "ctrl-shift-l": "pane::ActivateNextItem",
+
             // File navigation
             "space e": "workspace::ToggleLeftDock",
             "space f f": "file_finder::Toggle",
             "space f s": "text_finder::Toggle",
+            "space f o": "outline::Toggle",
             "space f g": "workspace::NewSearch",
+
             // Other utils
             "space f p": "workspace::CopyPath",
             "space y": "editor::Copy",
