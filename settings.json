@@ -8,11 +8,11 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
     "focus_follows_mouse": {
-        "enabled": false
+        "enabled": false,
     },
     "which_key": {
         "delay_ms": 300,
-        "enabled": true
+        "enabled": true,
     },
     "accessible_mode": false,
     "cli_default_open_behavior": "new_window",
@@ -31,7 +31,7 @@
     "icon_theme": {
         "mode": "dark",
         "light": "Zed (Default)",
-        "dark": "Zed (Default)"
+        "dark": "Zed (Default)",
     },
     // The name of a base set of key bindings to use.
     // This setting can take six values, each named after another
@@ -55,7 +55,7 @@
     // The OpenType features to enable for text in the editor.
     "buffer_font_features": {
         // Disable ligatures:
-        "calt": false
+        "calt": false,
     },
     // The default font size for text in the editor
     // The weight of the editor font in standard CSS units from 100 to 900.
@@ -1025,8 +1025,8 @@
     //     "autosave": { "after_delay": {"milliseconds": 500} },
     "autosave": {
         "after_delay": {
-            "milliseconds": 500
-        }
+            "milliseconds": 500,
+        },
     },
     // Maximum number of tabs per pane. Unset for unlimited.
     "max_tabs": null,
